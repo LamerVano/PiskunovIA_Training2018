@@ -13,5 +13,20 @@
         {
             _subject = newSubject;
         }
+
+        public void NotPassedExam(Student student)
+        {
+            student.DecreaseYear();
+        }
+
+        public void PassedExam(Student student)
+        {
+            student.IncreaseYear();
+        }
+
+        public void SetBigHomework(Student student)
+        {
+            student.ChangeWeight(student.Weight - 1);
+        }
     }
 }

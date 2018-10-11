@@ -22,5 +22,9 @@
         {
             _year++;
         }
+        public void DecreaseYear()
+        {
+            _year--;
+        }
     }
 }

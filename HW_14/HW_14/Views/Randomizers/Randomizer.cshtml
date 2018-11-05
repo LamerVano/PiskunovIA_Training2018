@@ -1,0 +1,24 @@
+﻿@model HW_14.Models.Randomizer
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        <p>
+            Введите Максимальное число
+        </p>
+        <p>
+            @Html.TextBoxFor(rnd => rnd.MaxNumber)
+        </p>
+    </div>
+
+    <input type="submit" value="Сгенерировать" />
+}
+<p>
+    @ViewBag.RandomNumber
+</p>
+
+<p><a class="btn btn-default" href="/Randomizers">На стартовою страницу</a></p>
+
+
+

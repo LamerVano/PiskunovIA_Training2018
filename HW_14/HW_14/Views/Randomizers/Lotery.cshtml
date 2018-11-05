@@ -1,0 +1,30 @@
+﻿@model HW_14.Models.Randomizer
+
+@using (Html.BeginForm())
+{
+
+    <div>
+        <p>
+            Введите тираж лотереи
+        </p>
+        <p>
+            @Html.TextBoxFor(rnd => rnd.MaxNumber)
+        </p>
+    </div>
+    <div>
+        <p>
+            Введите номер вашего билета
+        </p>
+        <p>
+            @Html.TextBoxFor(rnd => rnd.Number)
+        </p>
+    </div>
+
+    <input type="submit" value="Проверить" />
+}
+<p>
+    @ViewBag.Message
+</p>
+
+<p><a class="btn btn-default" href="/Randomizers">На стартовою страницу</a></p>
+

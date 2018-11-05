@@ -1,0 +1,19 @@
+﻿@model HW_14.Models.Function
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.TextBoxFor(model => model.A) x^2
+        + @Html.TextBoxFor(model => model.B) x
+        + @Html.TextBoxFor(model => model.C) = 0
+    </p>
+    <input type="submit" value="Calculate Roots" />
+}
+<p>
+    @ViewBag.Roots
+</p>
+
+<div>
+    <p><a class="btn btn-default" href="/Home">На главне меню</a></p>
+</div>
+

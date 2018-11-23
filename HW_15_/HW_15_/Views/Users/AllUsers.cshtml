@@ -1,0 +1,61 @@
+﻿@model HW_15_.Models.ListUsers
+
+@using (Html.BeginForm())
+{
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Mail</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.UsersList.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <input type="radio" value="@i " name="usersId" checked />
+                    </td>
+                    <td>@Html.DisplayFor(users => users.UsersList[i].Name)</td>
+
+                    <td>@Html.DisplayFor(users => users.UsersList[i].MiddleName)</td>
+
+                    <td>@Html.DisplayFor(users => users.UsersList[i].LastName)</td>
+
+                    <td>@Html.DisplayFor(users => users.UsersList[i].Mail)</td>
+
+                    <td>@Html.DisplayFor(users => users.UsersList[i].Age)</td>
+
+                    <td>@Html.DisplayFor(users => users.UsersList[i].Phone)</td>
+
+                    <td>@Html.DisplayFor(users => users.UsersList[i].Address)</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div>
+        <input class="btn btn-default" type="submit" name="change" value="Paste" />
+        <input class="btn btn-default" type="submit" name="change" value="Next" />
+    </div>
+
+    <div>
+        <input type="text" name="search" />
+        <input class="btn btn-default" type="submit" name="change" value="Search" />
+    </div>
+
+    <div>
+        <input class="btn btn-default" type="submit" value="Change" name="change" />
+        <input class="btn btn-default" type="submit" value="Remove" name="change" />
+    </div>
+}
+
+
+<p><a class="btn btn-default" href="/Users/Add">Add</a></p>
+

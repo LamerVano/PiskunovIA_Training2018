@@ -1,0 +1,104 @@
+﻿@model HW_15_.Models.User
+
+@using (Html.BeginForm())
+{
+    if (ViewBag.ID != -1)
+    {
+        @Html.HiddenFor(model => model.UserId)
+    }
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                Name
+            </div>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(users => users.Name)
+                @Html.ValidationMessageFor(users => users.Name)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                Middle Name
+            </div>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(users => users.MiddleName)
+                @Html.ValidationMessageFor(users => users.MiddleName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                Last Name
+            </div>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(users => users.LastName)
+                @Html.ValidationMessageFor(users => users.LastName)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                E-Mail
+            </div>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(users => users.Mail)
+                @Html.ValidationMessageFor(users => users.Mail)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                Password
+            </div>
+            <div class="col-sm-8">
+                @Html.PasswordFor(users => users.Password)
+                @Html.ValidationMessageFor(users => users.Password)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                Re-enter Pasword
+            </div>
+            <div class="col-sm-8">
+                @Html.PasswordFor(users => users.CheckPassword)
+                @Html.ValidationMessageFor(users => users.CheckPassword)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-sm-4">
+                Age
+            </div>
+            <div class="col col-sm-8">
+                @Html.TextBoxFor(users => users.Age)
+                @Html.ValidationMessageFor(users => users.Age)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                Phone
+            </div>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(users => users.Phone)
+                @Html.ValidationMessageFor(users => users.Phone)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                Address
+            </div>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(users => users.Address)
+                @Html.ValidationMessageFor(users => users.Address)
+            </div>
+        </div>
+
+        <input type="submit" value="@ViewBag.Change" name="type" />
+
+        <p>
+            @ViewBag.Eror
+        </p>
+
+    </div>
+}
+
+<p><a class="btn btn-default" href="/Users/AllUsers">All</a></p>
+
+
+
